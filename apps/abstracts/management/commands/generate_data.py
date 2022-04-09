@@ -23,7 +23,7 @@ class Command(BaseCommand):
             }
             CustomUser.objects.create_superuser(superuser)
 
-    def handle(self,args: tuple, **kwargs: dict) -> None:
+    def handle(self, *args: tuple, **kwargs: dict) -> None:
         """Handles data filling."""
 
         start: datetime = datetime.now()
